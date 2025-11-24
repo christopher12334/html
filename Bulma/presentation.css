@@ -1,23 +1,33 @@
 /* ------------------------------------- */
-/* ÜLDISED JA KEELATUD KERIMINE */
+/* NULLIMINE JA ÜLDISED SÄTTED */
 /* ------------------------------------- */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html, body {
-    overflow: hidden; 
+    overflow: hidden; /* Keelab kerimise */
     height: 100%;
+    width: 100%;
     margin: 0;
+    padding: 0;
 }
 
 body {
-    /* UUS TAUSTAPILT: Kasutame 'contain' + musta värvi. */
+    /* TAUSTAPILDI PARANDUS */
     background-image: url('taust.png'); 
-    background-size: contain; /* Pilt on alati täielikult nähtav ja ei lähe lehelt välja */
+    
+    /* MUUDETUD: See sunnib pildi täpselt ekraani nurkadesse.
+       Pilt on täielikult nähtav ja katab terve ekraani. */
+    background-size: 100% 104%; 
+    
     background-repeat: no-repeat; 
     background-position: center center; 
     background-attachment: fixed;
-    background-color: #000000; /* Täidab tühja ala mustaga */
     
     font-family: 'Arial', sans-serif;
-    color: #ffffff; /* Põhiteksti värv on puhas valge */
+    color: #ffffff; 
 }
 
 /* ------------------------------------- */
@@ -35,18 +45,21 @@ body {
     visibility: hidden;
     transition: opacity 0.6s ease-in-out;
     color: #ffffff; 
+    
+    display: flex;
+    flex-direction: column;
 }
 
-/* Bulma hero-body tsentreerimine (vertikaalne ja horisontaalne) */
 .presentation-slide .hero-body {
     padding-top: 2rem;
     padding-bottom: 2rem;
     display: flex;
     justify-content: center; 
     align-items: center; 
+    flex-grow: 1;
+    width: 100%;
 }
 
-/* AKTIIVNE slaid on nähtav */
 .presentation-slide.is-active {
     opacity: 1;
     visibility: visible;
@@ -60,37 +73,36 @@ body {
     width: 100%; 
     margin: auto; 
     border-radius: 4px;
-    
-    /* PUHAS KUJUNDUS: Eemaldasime blur'i ja läbipaistva tausta */
-    background-color: rgba(0, 0, 0, 0.7); /* Poolläbipaistev tumedam kiht, et taustapildi valged kujundid sisu ei segaks */
+    background-color: rgba(0, 0, 0, 0.7); 
     padding: 2.5rem; 
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Kerge valge äär */
+    border: 1px solid rgba(255, 255, 255, 0.2); 
 }
 
 .title {
     color: #ffffff; 
     font-weight: 700;
     font-size: 2.5rem;
-    text-shadow: none; /* Eemaldasime tugevad varjud */
+    text-shadow: none; 
 }
 .subtitle {
-    color: #f0f0f0; /* Subtitle heledam */
+    color: #f0f0f0; 
     font-weight: 500;
 }
 p, ul, li, table {
     color: #f0f0f0; 
 }
 
-/* Aktsentvärvid: Puhtad ja professionaalsed */
+/* Aktsentvärvid */
 .tag.is-primary, .button.is-primary {
-    background-color: #a872cc; /* Lilla aktsent */
+    background-color: #a872cc; 
     color: #ffffff;
 }
 .tag.is-link, .button.is-link, .has-text-link {
-    background-color: #6da2ed; /* Hele sinine aktsent */
+    background-color: #6da2ed; 
     color: #ffffff;
 }
-/* Ülejäänud Bulma aktsendid */
+
+/* Bulma värvid */
 .has-text-info { color: #80dfff !important; }
 .has-text-primary { color: #d0aaff !important; }
 .has-text-success { color: #85e0a3 !important; }
@@ -101,8 +113,7 @@ p, ul, li, table {
 .has-text-white { color: #ffffff !important; }
 .has-text-light { color: #f0f0f0 !important; }
 
-
-/* Slaidide nurgal olev numbrite kast */
+/* Slaidide number */
 .slide-number {
     position: absolute;
     bottom: 15px;
@@ -114,17 +125,18 @@ p, ul, li, table {
     border-radius: 12px;
     z-index: 100;
 }
+
 .list-style-none { 
     list-style: none; 
     margin-left: 0; 
 }
 .list-style-none li:before { 
     content: "✦"; 
-    color: #d0aaff; /* Kasutame heledamat lillat */
+    color: #d0aaff; 
     margin-right: 8px; 
 }
 
-/* Tabeli stiilid */
+/* Tabel */
 .table {
     background-color: rgba(255, 255, 255, 0.1); 
     color: #f0f0f0;
@@ -140,7 +152,6 @@ p, ul, li, table {
     background-color: rgba(255, 255, 255, 0.05); 
 }
 
-/* Koodikast (pre) tausta värv */
 pre {
     background-color: #222 !important;
     border: 1px solid #444;
@@ -149,17 +160,14 @@ pre code {
     color: #fff !important;
 }
 
-/* Modaalide sisu kast */
 .modal-content .box {
     background-color: #1a1a1a; 
     color: #f0f0f0;
 }
 
-
 /* ------------------------------------- */
-/* KLÕPSATAVAD ALAD */
+/* NAVIGATSIOON */
 /* ------------------------------------- */
-
 #presentation-container:after,
 #presentation-container:before {
     content: '';
