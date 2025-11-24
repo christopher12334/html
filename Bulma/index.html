@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulma CSS Analüüs - Interaktiivne Esitlus</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="presentation.css">
+</head>
+<body>
+
+    <div id="presentation-container">
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="0">
+            <div class="hero-body">
+                <div class="slide-content has-text-centered">
+                    <h1 class="title is-1 has-text-white mb-6">
+                        Bulma CSS Raamistiku Tehniline Analüüs
+                    </h1>
+                    <h2 class="subtitle is-3 has-text-link">Esitlejad</h2>
+                    <hr class="mb-5">
+                    
+                    <div class="columns is-centered">
+                        <div class="column is-one-third">
+                            <figure class="image is-128x128 is-inline-block mb-3" style="border-radius: 50%; overflow: hidden; border: 4px solid #a872cc;">
+                                <img src="https://via.placeholder.com/128/f3e9f9/a872cc?text=Nimi1" alt="Esitaja 1 profiil">
+                            </figure>
+                            <p class="title is-4 has-text-primary">[Sinu Nimi 1]</p>
+                            <p class="subtitle is-6 has-text-light">[Sinu Roll 1 / Ameti kirjeldus]</p>
+                        </div>
+                        
+                        <div class="column is-one-third">
+                            <figure class="image is-128x128 is-inline-block mb-3" style="border-radius: 50%; overflow: hidden; border: 4px solid #6da2ed;">
+                                <img src="https://via.placeholder.com/128/f0f8ff/6da2ed?text=Nimi2" alt="Esitaja 2 profiil">
+                            </figure>
+                            <p class="title is-4 has-text-link">[Sinu Nimi 2]</p>
+                            <p class="subtitle is-6 has-text-light">[Sinu Roll 2 / Ameti kirjeldus]</p>
+                        </div>
+                    </div>
+
+                    <h3 class="subtitle is-5 mt-6 has-text-light">
+                        [Projekt / Kursus / Kuupäev]
+                    </h3>
+                </div>
+            </div>
+            <p class="slide-number">SLIID 1 / 9</p>
+        </section>
+
+
+        <section class="presentation-slide hero is-fullheight-with-navbar is-active" data-slide-index="1">
+            <div class="hero-body">
+                <div class="slide-content has-text-centered">
+                    <p class="title is-1 has-text-white">Bulma CSS Raamistiku Tehniline Analüüs</p>
+                    <h1 class="subtitle is-3 has-text-light">Bulma: Kaasaegne Puhta CSS-i Raamistik</h1>
+                    <p class="block is-size-5 has-text-light has-text-weight-semibold">
+                        Definitsioon: Tasuta, avatud lähtekoodiga CSS-raamistik, mis on loodud reageerivate veebiliideste loomiseks.
+                    </p>
+                    <div class="columns is-centered mt-5">
+                        <div class="column is-one-third has-text-left">
+                            <p class="is-size-6 has-text-light">
+                                <span class="tag is-primary is-medium">Alus:</span> 100% ehitatud <strong class="has-text-info">Flexbox-mudelile</strong>.
+                            </p>
+                        </div>
+                        <div class="column is-one-third has-text-left">
+                            <p class="is-size-6 has-text-light">
+                                <span class="tag is-primary is-medium">Arhitektuuri Tunnus:</span> <strong class="has-text-info">"Pure CSS"</strong> – ei sisalda oma tuumas JavaScripti (JS) koodi.
+                            </p>
+                        </div>
+                        <div class="column is-one-third has-text-left">
+                            <p class="is-size-6 has-text-light">
+                                <span class="tag is-primary is-medium">Lähenemine:</span> Mõeldud <strong class="has-text-info">mobiil-eelistusega (Mobile-First)</strong> disainiks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">SLIID 2 / 9</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="2">
+            <div class="hero-body">
+                <div class="slide-content">
+                    <h2 class="title is-2 has-text-link">Ajalooline Taust ja Disainifilosoofia</h2>
+                    <hr>
+                    <div class="columns">
+                        <div class="column is-one-third">
+                            <h3 class="subtitle is-4 has-text-primary">Ajalugu</h3>
+                            <ul class="has-text-light">
+                                <li><strong>Looja ja Aasta:</strong> Jeremy Thomas, <span class="tag is-link is-light">2016</span>.</li>
+                                <li><strong>Kontekst:</strong> Loodud, kui <strong class="has-text-link">Flexbox</strong> saavutas laialdase toe.</li>
+                                <li><strong>Arendus:</strong> Elav avatud lähtekoodi kogukond.</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h3 class="subtitle is-4 has-text-primary">Disainifilosoofia (4 sammast)</h3>
+                            <div class="content has-text-light">
+                                <ul class="list-style-none">
+                                    <li><strong>Lihtsus:</strong> Intuitiivne ja arusaadav süntaks.</li>
+                                    <li><strong>Puhtus:</strong> Minimalistlik ja kaasaegne esteetika.</li>
+                                    <li><strong>Paindlikkus:</strong> Lihtne kohandada Sass-muutujate abil.</li>
+                                    <li><strong>Reageerivus:</strong> Garanteeritud paigutuse voolavus (Flexbox).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">SLIID 3 / 9</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="3">
+            <div class="hero-body">
+                <div class="slide-content">
+                    <h2 class="title is-2 has-text-link">Operatsioonimehhanismid: Sass ja Klassid</h2>
+                    <hr>
+                    <div class="columns">
+                        <div class="column is-half has-text-light">
+                            <h3 class="subtitle is-4 has-text-primary">Arhitektuur: Modulaarsus</h3>
+                            <p class="block"><strong>Ehitatud:</strong> <span class="tag is-primary">Dart Sass-i</span> abil.</p>
+                            <p class="block"><strong>Modulaarne Ülesehitus:</strong> Iga komponent on <span class="has-text-link">eraldi Sass-fail</span>, mis võimaldab importida ainult vajaliku ja <strong class="has-text-success">vähendada CSS-faili suurust</strong>.</p>
+                        </div>
+                        <div class="column is-half has-text-light">
+                            <h3 class="subtitle is-4 has-text-primary">Rakendusmeetod: HTML-i Kaudu</h3>
+                            <p class="block"><strong>Klassid:</strong> Rakendub standardsete CSS-klasside kaudu (nt `columns`, `button`).</p>
+                            <p class="block"><strong>Modifikaatorid:</strong> Loetavad modifikaatorid stiilide peenhäälestuseks:</p>
+                            <div class="tags">
+                                <span class="tag is-primary is-medium">is-primary (värv)</span>
+                                <span class="tag is-link is-medium">is-large (suurus)</span>
+                                <span class="tag is-danger is-medium">is-active (olek)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">SLIID 4 / 9</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="4">
+            <div class="hero-body">
+                <div class="slide-content">
+                    <h2 class="title is-2 has-text-link">Flexboxi Veerusüsteem (Columns)</h2>
+                    <hr>
+                    <h3 class="subtitle is-4 has-text-primary">Põhistruktuur ja Reageeriv Käitumine</h3>
+                    <div class="content has-text-light">
+                        <ul>
+                            <li><strong>Põhistruktuur:</strong> Veerud luuakse klassidega <span class="tag is-dark">`.columns`</span> ja <span class="tag is-dark">`.column`</span>, mis vaikimisi annavad <strong class="has-text-success">võrdse laiuse</strong>.</li>
+                            <li><strong>Mobiilseadmetel:</strong> Sisu <strong class="has-text-danger">virnastub vaikimisi vertikaalselt</strong>, horisontaalselt aktiveerub alates <span class="tag is-warning">tahvelarvuti puhvrist</span>.</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="subtitle is-4 has-text-primary">Granulaarne Reageerivus</h3>
+                    <p class="has-text-light">Veeru suurus on määratav igale puhvrile eraldi:</p>
+                    <div class="tags">
+                        <span class="tag is-primary is-medium">is-half-desktop</span>
+                        <span class="tag is-link is-medium">is-one-third-widescreen</span>
+                        <span class="tag is-success is-medium">is-one-quarter-fullhd</span>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">SLIID 5 / 9</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="5">
+            <div class="hero-body">
+                <div class="slide-content">
+                    <h2 class="title is-2 has-text-link">Põhikomponendid: Struktuur ja Aktivatsioon</h2>
+                    <hr>
+                    <table class="table is-fullwidth is-striped">
+                        <thead>
+                            <tr>
+                                <th>Komponent</th>
+                                <th>Eesmärk</th>
+                                <th>Oluline Märkus</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Modaal</strong></td>
+                                <td>Dünaamiline ülekatteaken.</td>
+                                <td>Aktivatsioon toimub <strong class="has-text-danger">ainult klassi is-active lisamisega JS-i kaudu</strong>.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sakid (Tabs)</strong></td>
+                                <td>Navigeerimiskomponent.</td>
+                                <td>Põhineb standardsetel loendielementidel.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Meediaobjekt</strong></td>
+                                <td>Korduv ja pesastatav element (kommentaarid).</td>
+                                <td>Toetab <strong class="has-text-info">pesastamist</strong> kuni 3 tasandit.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <button class="button is-primary mt-4" data-target="modal-example">Ava Modaal (JS Nõutud)</button>
+
+                    <div id="modal-example" class="modal">
+                      <div class="modal-background"></div>
+                      <div class="modal-content">
+                        <div class="box has-text-centered">
+                          <p class="has-text-weight-bold has-text-white">See modaal aktiveeriti JavaScripti abil!</p>
+                          <button class="delete" aria-label="close"></button>
+                        </div>
+                      </div>
+                      <button class="modal-close is-large" aria-label="close"></button>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">SLIID 6 / 9</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="6">
+            <div class="hero-body">
+                <div class="slide-content">
+                    <h2 class="title is-2 has-text-link">EELISED: Tõhusus ja Ühilduvus</h2>
+                    <hr>
+                    <div class="columns">
+                        <div class="column has-text-light">
+                            <h3 class="subtitle is-4 has-text-primary">Tugev Reageeriv Paigutus</h3>
+                            <p>Täielik tuginemine <strong class="has-text-info">Flexboxile</strong> tagab sujuvalt kohanduva veebilehe igas seadmes.</p>
+                        </div>
+                        <div class="column has-text-light">
+                            <h3 class="subtitle is-4 has-text-primary">Optimaalne Jõudlus</h3>
+                            <p>Modulaarse Sass-struktuuri abil saab kompileerida <strong class="has-text-success">ainult vajalikke komponente</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column has-text-light">
+                            <h3 class="subtitle is-4 has-text-primary">Kiire Õppimiskõver</h3>
+                            <p>Lihtne ja intuitiivne klassinimede süntaks.</p>
+                        </div>
+                        <div class="column has-text-light">
+                            <h3 class="subtitle is-4 has-text-primary">Maksimaalne JS-i Ühilduvus</h3>
+                            <p>Ideaalne kasutamiseks koos modernsete JavaScripti raamistikega (<strong class="has-text-info">React, Vue</strong>).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">SLIID 7 / 9</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="7">
+            <div class="hero-body">
+                <div class="slide-content">
+                    <h2 class="title is-2 has-text-danger">PUUDUSED ja Interaktiivsuse Vahe</h2>
+                    <hr>
+                    <div class="columns">
+                        <div class="column is-half has-text-light">
+                            <h3 class="subtitle is-4 has-text-danger">Vaja on Väliseid JS-Teeke</h3>
+                            <p class="block">Pure CSS tähendab, et puudub sisseehitatud loogika dünaamiliste elementide jaoks (<strong class="has-text-weight-bold">nt. modaalid</strong>). Arendaja peab selle loogika <span class="has-text-weight-bold">ise kirjutama</span>.</p>
+                        </div>
+                        <div class="column is-half has-text-light">
+                            <h3 class="subtitle is-4 has-text-danger">Failisuuruse Koormus</h3>
+                            <p class="block">Kui ei optimeerita Sass-i kaudu, võib täisjaotus olla lihtsate projektide jaoks <strong class="has-text-weight-bold">liiga suur</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">SLIID 8 / 9</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="8">
+            <div class="hero-body">
+                <div class="slide-content">
+                    <h2 class="title is-2 has-text-link">Sobivus Projektidele ja Koodinäited</h2>
+                    <hr>
+                    <div class="columns">
+                        <div class="column is-half has-text-light">
+                            <h3 class="subtitle is-4 has-text-primary">Ideaalsete Projektide Profiilid</h3>
+                            <div class="content">
+                                <ul>
+                                    <li>Kaasaegsed SPA-d (<strong class="has-text-info">React, Vue</strong>).</li>
+                                    <li>Administratiivsed Paneelid ja Tööriistad.</li>
+                                    <li>Portfooliod, Blogid ja Dokumentatsioonisaidid.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column is-half has-text-light">
+                            <h3 class="subtitle is-4 has-text-primary">Näide: Reageeriv Veergude Paigutus</h3>
+                            <p class="has-text-weight-bold has-text-white">HTML</p>
+                            <div class="box has-background-white">
+                                <pre><code>&lt;div class="columns is-desktop"&gt;
+  &lt;div class="column is-full-mobile is-half-desktop"&gt;
+    Veerg A
+  &lt;/div&gt;
+  &lt;div class="column"&gt;
+    Veerg B (Automaatne)
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">SLIID 9 / 9</p>
+        </section>
+        
+    </div>
+
+    <script src="js-logic.js"></script>
+
+</body>
+</html>
