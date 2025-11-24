@@ -17,9 +17,13 @@ html, body {
     margin: 0;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     background-image: url('taust.png'); 
-    background-size: cover; 
+    background-size: 100% 104%; 
     background-repeat: no-repeat; 
     background-position: center center; 
     background-attachment: fixed;
