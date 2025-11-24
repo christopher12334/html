@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulma CSS Analüüs</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="presentation.css">
+</head>
+<body>
+
+    <div id="presentation-container">
+        <div class="progress-bar" id="progressBar"></div>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="0">
+            <div class="hero-body">
+                <div class="slide-content has-text-centered">
+                    <span class="tag is-black is-medium is-rounded mb-5" style="border: 1px solid #a872cc; box-shadow: 0 0 10px #a872cc;">TEHNILINE ANALÜÜS</span>
+                    
+                    <h1 class="title is-1 has-text-white mb-6" style="font-size: 4.5rem; line-height: 1.1; text-shadow: 0 0 20px rgba(255,255,255,0.6);">
+                        BULMA CSS
+                    </h1>
+                    
+                    <div class="columns is-centered mt-6">
+                        <div class="column is-one-third">
+                            <div class="profile-card">
+                                <figure class="image is-128x128 is-inline-block profile-img purple-ring">
+                                    <img src="https://via.placeholder.com/150/1a1a1a/a872cc?text=IMG" alt="Esitaja 1">
+                                </figure>
+                                <h3 class="title is-3 has-text-white presenter-name">[Nimi 1]</h3>
+                                <p class="subtitle presenter-role">[Roll / Klass]</p>
+                            </div>
+                        </div>
+                        
+                        <div class="column is-one-third">
+                             <div class="profile-card">
+                                <figure class="image is-128x128 is-inline-block profile-img blue-ring">
+                                    <img src="https://via.placeholder.com/150/1a1a1a/6da2ed?text=IMG" alt="Esitaja 2">
+                                </figure>
+                                <h3 class="title is-3 has-text-white presenter-name">[Nimi 2]</h3>
+                                <p class="subtitle presenter-role">[Roll / Klass]</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">01 / 09</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="1">
+            <div class="hero-body">
+                <div class="slide-content">
+                    <div class="has-text-centered mb-6">
+                        <h2 class="title is-2 has-text-white">Mis asi on Bulma?</h2>
+                        <div style="width: 100px; height: 4px; background: #6da2ed; margin: 20px auto; border-radius: 2px;"></div>
+                    </div>
+                    
+                    <div class="content has-text-centered">
+                        <p class="is-size-3 has-text-weight-bold mb-6" style="font-style: italic;">
+                            "Modernne, <span class="has-text-primary">Javascripti-vaba</span> CSS raamistik, mis põhineb Flexboxil."
+                        </p>
+
+                        <div class="columns is-centered is-variable is-6 mt-6">
+                            <div class="column is-4">
+                                <div class="glow-box">
+                                    <i class="fa-brands fa-css3-alt fa-3x has-text-primary mb-4"></i>
+                                    <h4 class="title is-4 has-text-white">Flexbox</h4>
+                                    <p class="has-text-light">Moodne paigutus ilma floatideta.</p>
+                                </div>
+                            </div>
+                            <div class="column is-4">
+                                <div class="glow-box">
+                                    <i class="fa-solid fa-ban fa-3x has-text-danger mb-4"></i>
+                                    <h4 class="title is-4 has-text-white">No JS</h4>
+                                    <p class="has-text-light">Ainult stiilid, loogika teed ise.</p>
+                                </div>
+                            </div>
+                            <div class="column is-4">
+                                <div class="glow-box">
+                                    <i class="fa-solid fa-mobile-screen fa-3x has-text-success mb-4"></i>
+                                    <h4 class="title is-4 has-text-white">Mobile</h4>
+                                    <p class="has-text-light">Töötab telefonis ideaalselt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">02 / 09</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="2">
+            <div class="hero-body">
+                <div class="slide-content">
+                    <div class="columns is-vcentered">
+                        <div class="column is-5">
+                            <h2 class="title is-2 has-text-primary">Ajalugu</h2>
+                            <ul style="border-left: 2px solid rgba(255,255,255,0.2); padding-left: 20px;">
+                                <li class="mb-5">
+                                    <strong class="is-size-4 has-text-white">2016</strong><br>
+                                    Loodud Jeremy Thomase poolt.
+                                </li>
+                                <li class="mb-5">
+                                    <strong class="is-size-4 has-text-white">Open Source</strong><br>
+                                    Üks populaarsemaid CSS raamistikke GitHubis.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column is-7">
+                            <div class="glow-box">
+                                <h3 class="title is-4 has-text-white mb-4">Filosoofia</h3>
+                                <div class="content is-size-5 has-text-white">
+                                    <p class="mb-3"><span class="has-text-success">✓</span> <strong>Lihtsus:</strong> Ingliskeelsed klassinimed.</p>
+                                    <p class="mb-3"><span class="has-text-success">✓</span> <strong>Puhtus:</strong> Ei mingeid ülearuseid stiile.</p>
+                                    <p><span class="has-text-success">✓</span> <strong>Modulaarsus:</strong> Kasuta ainult seda, mida vajad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">03 / 09</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="3">
+            <div class="hero-body">
+                <div class="slide-content">
+                    <h2 class="title is-2 has-text-white">Kuidas see töötab?</h2>
+                    
+                    <div class="columns mt-5">
+                        <div class="column is-6">
+                            <h3 class="title is-4 has-text-link">SASS Muutujad</h3>
+                            <p class="mb-4">Muuda värve ja fonte ühe reaga:</p>
+                            <pre style="background: #1e1e1e; border-radius: 8px; padding: 15px; color: #a872cc; font-weight: bold;">
+$primary: #8c67ef;
+$family-sans-serif: "Nunito", sans-serif;
+@import "bulma";</pre>
+                        </div>
+                        <div class="column is-6">
+                            <h3 class="title is-4 has-text-success">Loetavad klassid</h3>
+                            <p class="mb-4">Klassinimed on loogilised:</p>
+                            <div class="tags are-large">
+                                <span class="tag is-primary">is-primary</span>
+                                <span class="tag is-info is-light">is-light</span>
+                                <span class="tag is-rounded">is-rounded</span>
+                                <span class="tag is-loading is-black">is-loading</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">04 / 09</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="4">
+            <div class="hero-body">
+                <div class="slide-content">
+                    <h2 class="title is-2 has-text-white">Veerusüsteem (Grid)</h2>
+                    <p class="subtitle has-text-grey-lighter">Lihtsaim viis asju paigutada.</p>
+                    
+                    <div class="columns is-mobile mt-5">
+                        <div class="column has-background-primary has-text-centered p-4 m-1" style="border-radius: 8px; font-weight:bold;">Auto</div>
+                        <div class="column has-background-info has-text-centered p-4 m-1" style="border-radius: 8px; font-weight:bold;">Auto</div>
+                        <div class="column has-background-link has-text-centered p-4 m-1" style="border-radius: 8px; font-weight:bold;">Auto</div>
+                    </div>
+                    
+                    <div class="columns mt-4">
+                        <div class="column is-two-thirds has-background-danger has-text-centered p-4 m-1" style="border-radius: 8px; font-weight:bold;">is-two-thirds</div>
+                        <div class="column has-background-warning has-text-black has-text-centered p-4 m-1" style="border-radius: 8px; font-weight:bold;">Auto</div>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">05 / 09</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="5">
+            <div class="hero-body">
+                <div class="slide-content">
+                    <h2 class="title is-2 has-text-white mb-5">Komponendid</h2>
+                    <table class="table is-fullwidth" style="background: transparent; color: white;">
+                        <thead>
+                            <tr>
+                                <th class="has-text-primary is-size-4" style="border-bottom: 2px solid #a872cc;">Nimi</th>
+                                <th class="has-text-primary is-size-4" style="border-bottom: 2px solid #a872cc;">Kirjeldus</th>
+                                <th class="has-text-primary is-size-4" style="border-bottom: 2px solid #a872cc;">JS?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-4 is-size-5"><strong>Modal</strong></td>
+                                <td class="py-4">Hüpikaken info kuvamiseks</td>
+                                <td class="py-4"><span class="tag is-danger">Vajab JS</span></td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 is-size-5"><strong>Navbar</strong></td>
+                                <td class="py-4">Responsiivne menüü</td>
+                                <td class="py-4"><span class="tag is-warning">Burger JS</span></td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 is-size-5"><strong>Hero</strong></td>
+                                <td class="py-4">Suur päis (nagu see slaid)</td>
+                                <td class="py-4"><span class="tag is-success">Ei vaja JS</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="slide-number">06 / 09</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="6">
+            <div class="hero-body">
+                <div class="slide-content">
+                    <h2 class="title is-2 has-text-centered mb-6">Miks valida Bulma?</h2>
+                    
+                    <div class="tile is-ancestor">
+                        <div class="tile is-parent">
+                            <article class="tile is-child box has-background-black-ter has-text-white" style="border: 1px solid #a872cc;">
+                                <p class="title is-4 has-text-primary"><i class="fa-solid fa-bolt"></i> Kiire</p>
+                                <p>Lihtne õppida, alustad minutitega.</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box has-background-black-ter has-text-white" style="border: 1px solid #6da2ed;">
+                                <p class="title is-4 has-text-link"><i class="fa-brands fa-react"></i> Ühilduv</p>
+                                <p>Ideaalne Reacti ja Vue projektidele.</p>
+                            </article>
+                        </div>
+                        <div class="tile is-parent">
+                            <article class="tile is-child box has-background-black-ter has-text-white" style="border: 1px solid #48c774;">
+                                <p class="title is-4 has-text-success"><i class="fa-solid fa-layer-group"></i> Modulaarne</p>
+                                <p>Impordi ainult nupud ja vormid.</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">07 / 09</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="7">
+            <div class="hero-body">
+                <div class="slide-content" style="border-left: 5px solid #f14668;">
+                    <h2 class="title is-2 has-text-danger mb-5">Puudused</h2>
+                    <div class="content is-size-4 has-text-white">
+                        <ul style="list-style: none;">
+                            <li class="mb-4">
+                                <i class="fa-solid fa-triangle-exclamation has-text-danger mr-3"></i>
+                                <strong>Puudub JavaScript:</strong><br>
+                                <span class="is-size-5 has-text-grey-light">Sina pead ise kirjutama, kuidas menüüd avanevad.</span>
+                            </li>
+                            <li class="mb-4">
+                                <i class="fa-solid fa-weight-hanging has-text-danger mr-3"></i>
+                                <strong>Faili suurus:</strong><br>
+                                <span class="is-size-5 has-text-grey-light">Täispikk CSS on suur. Kasuta kindlasti Sassi.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="slide-number">08 / 09</p>
+        </section>
+
+        <section class="presentation-slide hero is-fullheight-with-navbar" data-slide-index="8">
+            <div class="hero-body">
+                <div class="slide-content has-text-centered" style="border: none; background: rgba(0,0,0,0.6);">
+                    
+                    <div class="end-circle" id="finish-btn" style="cursor: pointer; position: relative;">
+                        <i class="fa-solid fa-check fa-4x has-text-primary" id="check-icon"></i>
+                    </div>
+
+                    <h1 class="thank-you-text">AITÄH!</h1>
+                    
+                    <h2 class="subtitle is-3 has-text-white mb-6">Kas on küsimusi?</h2>
+                    
+                    <div class="columns is-centered mt-6">
+                    </div>
+
+                    <p class="is-size-6 has-text-grey mt-6">2025 / Bulma Esitlus</p>
+                </div>
+            </div>
+            <p class="slide-number">09 / 09</p>
+        </section>
+
+    </div>
+
+    <script src="js-logic.js"></script>
+
+</body>
+</html>
