@@ -1,11 +1,8 @@
-/* ------------------------------------- */
-/* ÜLDISED SÄTTED */
-/* ------------------------------------- */
+
 :root {
-    --primary-color: #a872cc; /* Lillakas neoon */
-    --link-color: #6da2ed;    /* Sinakas neoon */
-    /* Taust on tagasi läbipaistvam (0.85), et oleks "äge", 
-       aga tekstile lisame varju */
+    --primary-color: #a872cc; 
+    --link-color: #6da2ed;    
+
     --glass-bg: rgba(18, 18, 24, 0.85); 
     --glass-border: 1px solid rgba(255, 255, 255, 0.1);
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
@@ -32,7 +29,7 @@ body {
     color: #ffffff; 
 }
 
-/* See teeb teksti loetavaks isegi valge laigu peal! */
+
 h1, h2, h3, h4, h5, h6, .title, .subtitle, p, li, td {
     text-shadow: 0 2px 4px rgba(0,0,0,0.95); 
 }
@@ -42,9 +39,7 @@ h1, h2, .title {
     letter-spacing: -1px;
 }
 
-/* ------------------------------------- */
-/* KLAASIST PANEEL (Glassmorphism) */
-/* ------------------------------------- */
+
 .slide-content { 
     max-width: 1200px; 
     width: 90%; 
@@ -53,7 +48,7 @@ h1, h2, .title {
     padding: 3rem;
     position: relative;
     
-    /* See on see vinge efekt */
+
     background: var(--glass-bg);
     backdrop-filter: blur(12px); 
     -webkit-backdrop-filter: blur(12px);
@@ -62,9 +57,7 @@ h1, h2, .title {
     transition: transform 0.3s ease;
 }
 
-/* ------------------------------------- */
-/* SLAIDIDE ANIMATSIOON */
-/* ------------------------------------- */
+
 .presentation-slide {
     height: 100vh;
     width: 100%;
@@ -74,7 +67,7 @@ h1, h2, .title {
     left: 0;
     opacity: 0;
     visibility: hidden;
-    /* Äge sissesõit */
+
     transform: scale(1.1) translateY(20px); 
     transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
     z-index: 0;
@@ -90,9 +83,7 @@ h1, h2, .title {
     z-index: 10;
 }
 
-/* ------------------------------------- */
-/* PROFIILIKAARDID (Parandatud vahed) */
-/* ------------------------------------- */
+
 .profile-card {
     text-align: center;
     padding: 20px;
@@ -107,7 +98,7 @@ h1, h2, .title {
     overflow: hidden;
     border: 3px solid transparent;
     box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    margin-bottom: 25px !important; /* Siin oli viga, tegin vahe suuremaks */
+    margin-bottom: 25px !important; 
     width: 140px;
     height: 140px;
     margin-left: auto;
@@ -117,7 +108,7 @@ h1, h2, .title {
 .profile-img.purple-ring { border-color: var(--primary-color); }
 .profile-img.blue-ring { border-color: var(--link-color); }
 
-/* Nimede ja rollide stiil */
+
 .presenter-name {
     margin-bottom: 10px !important; /* Kindel vahe nime all */
     font-weight: 800;
@@ -130,14 +121,12 @@ h1, h2, .title {
     opacity: 0.9;
 }
 
-/* ------------------------------------- */
-/* ERILISED EFEKTID */
-/* ------------------------------------- */
+
 .gradient-text {
     background: linear-gradient(135deg, #fff 30%, #a872cc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* Gradientil ei saa olla tavalist varju, kasutame filtrit */
+    
     filter: drop-shadow(0 2px 2px rgba(255, 255, 255, 0.8)); 
 }
 
@@ -150,9 +139,7 @@ h1, h2, .title {
     height: 100%;
 }
 
-/* ------------------------------------- */
-/* LÕPUSLAID */
-/* ------------------------------------- */
+
 .end-circle {
     width: 200px;
     height: 200px;
@@ -198,9 +185,7 @@ h1, h2, .title {
     transform: scale(1.2);
 }
 
-/* ------------------------------------- */
-/* ABIELEMENDID */
-/* ------------------------------------- */
+
 .slide-number {
     position: absolute;
     bottom: 20px;
@@ -224,7 +209,7 @@ h1, h2, .title {
     box-shadow: 0 -2px 10px var(--primary-color);
 }
 
-/* Navigatsiooni alad */
+
 #presentation-container:after,
 #presentation-container:before {
     content: '';
@@ -234,42 +219,38 @@ h1, h2, .title {
 #presentation-container:after { right: 0; cursor: pointer; }
 #presentation-container:before { left: 0; cursor: pointer; }
 
-/* ------------------------------------- */
-/* KONFETI EFEKT (UUS) */
-/* ------------------------------------- */
 
-/* Nupu vajutamise efekt */
 .end-circle:active {
     transform: scale(0.9);
 }
 
-/* See on üksik konfeti tükk */
+
 .particle {
     position: fixed;
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    pointer-events: none; /* Et ei segaks hiirt */
+    pointer-events: none; 
     z-index: 9999;
     animation: pop-particle 1s ease-out forwards;
 }
 
-/* Animatsioon, kuidas tükk lendab ja kaob */
+
 @keyframes pop-particle {
     0% {
         transform: translate(0, 0) scale(1);
         opacity: 1;
     }
     100% {
-        /* CSS muutujaid (var) muudame Javascriptis */
+
         transform: translate(var(--x), var(--y)) scale(0);
         opacity: 0;
     }
 }
 
-/* Edukas värvimuutus ikoonile */
 .success-glow {
-    color: #48c774 !important; /* Roheline */
+    color: #48c774 !important; 
     filter: drop-shadow(0 0 20px #48c774);
     transition: all 0.3s;
+
 }
