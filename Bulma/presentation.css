@@ -1,0 +1,188 @@
+/* ------------------------------------- */
+/* NULLIMINE JA ÜLDISED SÄTTED */
+/* ------------------------------------- */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden; /* Keelab kerimise */
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* TAUSTAPILDI PARANDUS */
+    background-image: url('taust.png'); 
+    
+    /* MUUDETUD: See sunnib pildi täpselt ekraani nurkadesse.
+       Pilt on täielikult nähtav ja katab terve ekraani. */
+    background-size: 100% 104%; 
+    
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-attachment: fixed;
+    
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; 
+}
+
+/* ------------------------------------- */
+/* SLIIDIDE KONTROLL JA STIIL */
+/* ------------------------------------- */
+.presentation-slide {
+    height: 100vh;
+    width: 100%;
+    padding: 0 1.5rem; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease-in-out;
+    color: #ffffff; 
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.presentation-slide .hero-body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-grow: 1;
+    width: 100%;
+}
+
+.presentation-slide.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ------------------------------------- */
+/* SISU JA TEKSTI STIILID */
+/* ------------------------------------- */
+.slide-content { 
+    max-width: 1000px; 
+    width: 100%; 
+    margin: auto; 
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 2.5rem; 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+.title {
+    color: #ffffff; 
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-shadow: none; 
+}
+.subtitle {
+    color: #f0f0f0; 
+    font-weight: 500;
+}
+p, ul, li, table {
+    color: #f0f0f0; 
+}
+
+/* Aktsentvärvid */
+.tag.is-primary, .button.is-primary {
+    background-color: #a872cc; 
+    color: #ffffff;
+}
+.tag.is-link, .button.is-link, .has-text-link {
+    background-color: #6da2ed; 
+    color: #ffffff;
+}
+
+/* Bulma värvid */
+.has-text-info { color: #80dfff !important; }
+.has-text-primary { color: #d0aaff !important; }
+.has-text-success { color: #85e0a3 !important; }
+.has-text-warning { color: #ffe066 !important; }
+.has-text-danger { color: #ff859e !important; }
+.has-text-dark { color: #e0e0e0 !important; }
+.has-text-grey { color: #bbbbbb !important; }
+.has-text-white { color: #ffffff !important; }
+.has-text-light { color: #f0f0f0 !important; }
+
+/* Slaidide number */
+.slide-number {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
+    font-size: 1rem;
+    color: #ffffff; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 2px 10px;
+    border-radius: 12px;
+    z-index: 100;
+}
+
+.list-style-none { 
+    list-style: none; 
+    margin-left: 0; 
+}
+.list-style-none li:before { 
+    content: "✦"; 
+    color: #d0aaff; 
+    margin-right: 8px; 
+}
+
+/* Tabel */
+.table {
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #f0f0f0;
+}
+.table th {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.table td {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+.table.is-striped tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05); 
+}
+
+pre {
+    background-color: #222 !important;
+    border: 1px solid #444;
+}
+pre code {
+    color: #fff !important;
+}
+
+.modal-content .box {
+    background-color: #1a1a1a; 
+    color: #f0f0f0;
+}
+
+/* ------------------------------------- */
+/* NAVIGATSIOON */
+/* ------------------------------------- */
+#presentation-container:after,
+#presentation-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 20%; 
+    cursor: pointer;
+    z-index: 50;
+}
+
+#presentation-container:after {
+    right: 0;
+}
+
+#presentation-container:before {
+    left: 0;
+}
