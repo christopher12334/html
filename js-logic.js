@@ -5,21 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSlideIndex = 0;
     const totalSlides = slides.length; 
 
-    /**
-     * Kontrollib ja kuvab õige slaidi.
-     */
     function showSlide(newIndex) {
         if (newIndex >= 0 && newIndex < totalSlides) {
-            // Eemalda eelmiselt
+            
             slides[currentSlideIndex].classList.remove('is-active');
             
-            // Uuenda indeksit
+            
             currentSlideIndex = newIndex;
             
-            // Lisa uuele
+            
             slides[currentSlideIndex].classList.add('is-active');
             
-            // Uuenda edenemisriba
+            
             updateProgressBar();
         }
     }
@@ -31,15 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
         progressBar.style.width = `${percentage}%`;
     }
 
-    // Algseadistus
+    
     if (!slides[currentSlideIndex].classList.contains('is-active')) {
          slides[currentSlideIndex].classList.add('is-active');
     }
-    updateProgressBar(); // Käivita alguses ka
+    updateProgressBar(); 
 
-    // -------------------------------------
-    // 1. NOOLEKLAHVIGA KONTROLL
-    // -------------------------------------
+
     document.addEventListener('keydown', (e) => {
         if (e.key === "ArrowRight") {
             e.preventDefault();
@@ -50,9 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // -------------------------------------
-    // 2. HIITREKLÕPSAMISE KONTROLL
-    // -------------------------------------
+
     presentationContainer.addEventListener('click', (e) => {
         // Kui klikitakse nupule, lingile või modaalile, ära vaheta slaidi
         if (e.target.closest('button, a, .modal-content, [data-target], .code-window, #finish-btn')) {
@@ -69,9 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // -------------------------------------
-    // 3. MODAALI LOOGIKA
-    // -------------------------------------
     const modalActivators = document.querySelectorAll('[data-target]');
     const modalClosers = document.querySelectorAll('.modal-close, .modal-background, .delete-btn');
 
@@ -92,27 +82,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // -------------------------------------
-    // 4. LÕPUSLAIDI EFEKT (KONFETI) - UUS
-    // -------------------------------------
     const finishBtn = document.getElementById('finish-btn');
     
     if (finishBtn) {
         finishBtn.addEventListener('click', (e) => {
-            // Peatame mullitamise, et slaid ei vahetuks
+            
             e.stopPropagation(); 
 
-            // 1. Muudame ikooni värvi ja stiili
+            
             const icon = finishBtn.querySelector('i');
             finishBtn.style.borderColor = '#48c774'; // Ring roheliseks
             finishBtn.style.boxShadow = '0 0 40px #48c774, inset 0 0 20px #48c774';
             icon.classList.remove('fa-check');
             icon.classList.add('fa-face-laugh-beam', 'success-glow'); // Naerunägu
 
-            // 2. Tekitame 50 osakest (konfetit)
+            
             const colors = ['#a872cc', '#6da2ed', '#ffffff', '#48c774', '#f14668'];
             
-            // Saame nupu koordinaadid, et plahvatus tuleks nupu keskelt
+            
             const rect = finishBtn.getBoundingClientRect();
             const centerX = rect.left + rect.width / 2;
             const centerY = rect.top + rect.height / 2;
@@ -121,29 +108,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
                 
-                // Juhuslik värv
+                
                 particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
                 
-                // Alguspunkt (nupu keskel)
+                
                 particle.style.left = centerX + 'px';
                 particle.style.top = centerY + 'px';
 
-                // Arvutame juhusliku suuna (X ja Y teljel)
-                // Random arv vahemikus -200px kuni +200px
                 const destX = (Math.random() - 0.5) * 400 + 'px';
                 const destY = (Math.random() - 0.5) * 400 + 'px';
 
-                // Määrame CSS muutujad, mida animatsioon kasutab
                 particle.style.setProperty('--x', destX);
                 particle.style.setProperty('--y', destY);
 
                 document.body.appendChild(particle);
 
-                // Kustutame elemendi pärast animatsiooni lõppu (1 sekund)
                 setTimeout(() => {
                     particle.remove();
                 }, 1000);
             }
         });
     }
+
 });
